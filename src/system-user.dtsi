@@ -6,4 +6,6 @@
 };
 
 // Custom IP map to UIO
-
+&im_pros_0 {
+	compatible = "generic-uio";
+};
