@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="image_processor.cpp" path="/home/acerpc/OneDrive/SDU/EmbeddedSystems/assigment2/HLS/image_processor.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="Image_tb.cpp" path="/home/acerpc/OneDrive/SDU/EmbeddedSystems/assigment2/HLS/Image_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
