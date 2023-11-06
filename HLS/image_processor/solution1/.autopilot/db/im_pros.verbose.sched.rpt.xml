@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'im_pros'" level="0">
-<item name = "Date">Fri Nov  3 14:47:08 2023
+<item name = "Date">Mon Nov  6 16:26:42 2023
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">image_processor</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">59225, 59225, 0.592 ms, 0.592 ms, 59226, 59226, none</column>
+<column name="">120660, 120660, 1.207 ms, 1.207 ms, 120661, 120661, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_17_1_VITIS_LOOP_18_2">59223, 59223, 9, 5, 1, 11844, yes</column>
+<column name="- VITIS_LOOP_17_1_VITIS_LOOP_18_2">120658, 120658, 12, 10, 1, 12065, yes</column>
 </table>
 </item>
 </section>

@@ -20,5 +20,11 @@ domain active {zynqmp_fsbl}
 domain active {zynqmp_pmufw}
 domain active {standalone_psu_cortexa53_0}
 platform generate -quick
+bsp reload
+bsp config stdin "psu_uart_1"
+bsp config stdout "psu_uart_1"
+bsp write
+bsp reload
+catch {bsp regenerate}
 platform generate
-platform write
+bsp reload

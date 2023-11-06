@@ -1,0 +1,16 @@
+/home/mp4d/assignment2_ws/install/my_camera_node/lib/my_camera_node/listener
+/home/mp4d/assignment2_ws/install/my_camera_node/share/ament_index/resource_index/package_run_dependencies/my_camera_node
+/home/mp4d/assignment2_ws/install/my_camera_node/share/ament_index/resource_index/parent_prefix_path/my_camera_node
+/home/mp4d/assignment2_ws/install/my_camera_node/share/my_camera_node/environment/ament_prefix_path.sh
+/home/mp4d/assignment2_ws/install/my_camera_node/share/my_camera_node/environment/ament_prefix_path.dsv
+/home/mp4d/assignment2_ws/install/my_camera_node/share/my_camera_node/environment/path.sh
+/home/mp4d/assignment2_ws/install/my_camera_node/share/my_camera_node/environment/path.dsv
+/home/mp4d/assignment2_ws/install/my_camera_node/share/my_camera_node/local_setup.bash
+/home/mp4d/assignment2_ws/install/my_camera_node/share/my_camera_node/local_setup.sh
+/home/mp4d/assignment2_ws/install/my_camera_node/share/my_camera_node/local_setup.zsh
+/home/mp4d/assignment2_ws/install/my_camera_node/share/my_camera_node/local_setup.dsv
+/home/mp4d/assignment2_ws/install/my_camera_node/share/my_camera_node/package.dsv
+/home/mp4d/assignment2_ws/install/my_camera_node/share/ament_index/resource_index/packages/my_camera_node
+/home/mp4d/assignment2_ws/install/my_camera_node/share/my_camera_node/cmake/my_camera_nodeConfig.cmake
+/home/mp4d/assignment2_ws/install/my_camera_node/share/my_camera_node/cmake/my_camera_nodeConfig-version.cmake
+/home/mp4d/assignment2_ws/install/my_camera_node/share/my_camera_node/package.xml

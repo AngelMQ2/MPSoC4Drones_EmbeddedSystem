@@ -18,6 +18,61 @@ int XIm_pros_CfgInitialize(XIm_pros *InstancePtr, XIm_pros_Config *ConfigPtr) {
 }
 #endif
 
+void XIm_pros_Start(XIm_pros *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XIm_pros_ReadReg(InstancePtr->Axi_cpu_BaseAddress, XIM_PROS_AXI_CPU_ADDR_AP_CTRL) & 0x80;
+    XIm_pros_WriteReg(InstancePtr->Axi_cpu_BaseAddress, XIM_PROS_AXI_CPU_ADDR_AP_CTRL, Data | 0x01);
+}
+
+u32 XIm_pros_IsDone(XIm_pros *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XIm_pros_ReadReg(InstancePtr->Axi_cpu_BaseAddress, XIM_PROS_AXI_CPU_ADDR_AP_CTRL);
+    return (Data >> 1) & 0x1;
+}
+
+u32 XIm_pros_IsIdle(XIm_pros *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XIm_pros_ReadReg(InstancePtr->Axi_cpu_BaseAddress, XIM_PROS_AXI_CPU_ADDR_AP_CTRL);
+    return (Data >> 2) & 0x1;
+}
+
+u32 XIm_pros_IsReady(XIm_pros *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XIm_pros_ReadReg(InstancePtr->Axi_cpu_BaseAddress, XIM_PROS_AXI_CPU_ADDR_AP_CTRL);
+    // check ap_start to see if the pcore is ready for next input
+    return !(Data & 0x1);
+}
+
+void XIm_pros_EnableAutoRestart(XIm_pros *InstancePtr) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XIm_pros_WriteReg(InstancePtr->Axi_cpu_BaseAddress, XIM_PROS_AXI_CPU_ADDR_AP_CTRL, 0x80);
+}
+
+void XIm_pros_DisableAutoRestart(XIm_pros *InstancePtr) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XIm_pros_WriteReg(InstancePtr->Axi_cpu_BaseAddress, XIM_PROS_AXI_CPU_ADDR_AP_CTRL, 0);
+}
+
 u32 XIm_pros_Get_imageIn_BaseAddress(XIm_pros *InstancePtr) {
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
@@ -206,5 +261,60 @@ u32 XIm_pros_Read_imageOut_Bytes(XIm_pros *InstancePtr, int offset, char *data, 
         *(data + i) = *(char *)(InstancePtr->Axi_cpu_BaseAddress + XIM_PROS_AXI_CPU_ADDR_IMAGEOUT_BASE + offset + i);
     }
     return length;
+}
+
+void XIm_pros_InterruptGlobalEnable(XIm_pros *InstancePtr) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XIm_pros_WriteReg(InstancePtr->Axi_cpu_BaseAddress, XIM_PROS_AXI_CPU_ADDR_GIE, 1);
+}
+
+void XIm_pros_InterruptGlobalDisable(XIm_pros *InstancePtr) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XIm_pros_WriteReg(InstancePtr->Axi_cpu_BaseAddress, XIM_PROS_AXI_CPU_ADDR_GIE, 0);
+}
+
+void XIm_pros_InterruptEnable(XIm_pros *InstancePtr, u32 Mask) {
+    u32 Register;
+
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Register =  XIm_pros_ReadReg(InstancePtr->Axi_cpu_BaseAddress, XIM_PROS_AXI_CPU_ADDR_IER);
+    XIm_pros_WriteReg(InstancePtr->Axi_cpu_BaseAddress, XIM_PROS_AXI_CPU_ADDR_IER, Register | Mask);
+}
+
+void XIm_pros_InterruptDisable(XIm_pros *InstancePtr, u32 Mask) {
+    u32 Register;
+
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Register =  XIm_pros_ReadReg(InstancePtr->Axi_cpu_BaseAddress, XIM_PROS_AXI_CPU_ADDR_IER);
+    XIm_pros_WriteReg(InstancePtr->Axi_cpu_BaseAddress, XIM_PROS_AXI_CPU_ADDR_IER, Register & (~Mask));
+}
+
+void XIm_pros_InterruptClear(XIm_pros *InstancePtr, u32 Mask) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XIm_pros_WriteReg(InstancePtr->Axi_cpu_BaseAddress, XIM_PROS_AXI_CPU_ADDR_ISR, Mask);
+}
+
+u32 XIm_pros_InterruptGetEnabled(XIm_pros *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XIm_pros_ReadReg(InstancePtr->Axi_cpu_BaseAddress, XIM_PROS_AXI_CPU_ADDR_IER);
+}
+
+u32 XIm_pros_InterruptGetStatus(XIm_pros *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XIm_pros_ReadReg(InstancePtr->Axi_cpu_BaseAddress, XIM_PROS_AXI_CPU_ADDR_ISR);
 }
 

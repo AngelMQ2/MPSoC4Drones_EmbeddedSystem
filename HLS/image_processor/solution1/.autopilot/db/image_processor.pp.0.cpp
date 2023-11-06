@@ -5591,16 +5591,29 @@ __attribute__((sdx_kernel("im_pros", 0))) void im_pros(pixel imageIn[96][128], p
 
 
 
-#pragma HLS INTERFACE s_axilite port=return
+#pragma HLS INTERFACE s_axilite port=return bundle=AXI_CPU
 #pragma HLS INTERFACE s_axilite port=imageIn bundle=AXI_CPU
 #pragma HLS INTERFACE s_axilite port=imageOut bundle=AXI_CPU
 
-VITIS_LOOP_17_1: for (int i = 1; i < 96 - 1; ++i) {
- VITIS_LOOP_18_2: for (int j = 1; j < 128 - 1; ++j) {
+VITIS_LOOP_17_1: for (int i = 0; i < 96 - 1; ++i) {
+ VITIS_LOOP_18_2: for (int j = 0; j < 128 - 1; ++j) {
 #pragma HLS pipeline II=1
+ if(i == 0 and j == 0){
 
+   imageOut[i][j] = (imageIn[i][j] + imageIn[i + 1][j] + imageIn[i][j + 1]) / 3;
+  }
+  else if(i == 0){
 
- imageOut[i][j] = (imageIn[i][j] + imageIn[i - 1][j] + imageIn[i + 1][j] + imageIn[i][j - 1] + imageIn[i][j + 1]) / 5;
+   imageOut[i][j] = (imageIn[i][j] + imageIn[i + 1][j] + imageIn[i][j - 1] + imageIn[i][j + 1]) / 4;
+  }
+  else if(j == 0){
+
+   imageOut[i][j] = (imageIn[i][j] + imageIn[i - 1][j] + imageIn[i + 1][j] + imageIn[i][j + 1]) / 4;
+  }
+  else{
+
+   imageOut[i][j] = (imageIn[i][j] + imageIn[i - 1][j] + imageIn[i + 1][j] + imageIn[i][j - 1] + imageIn[i][j + 1]) / 5;
+  }
  }
 }
 }

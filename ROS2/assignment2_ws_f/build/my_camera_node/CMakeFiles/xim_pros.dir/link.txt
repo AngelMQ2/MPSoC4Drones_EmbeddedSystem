@@ -1,0 +1,2 @@
+/usr/bin/ar qc libxim_pros.a  CMakeFiles/xim_pros.dir/include/xim_pros.c.o
+/usr/bin/ranlib libxim_pros.a

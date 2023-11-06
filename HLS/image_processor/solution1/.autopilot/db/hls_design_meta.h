@@ -4,9 +4,9 @@
 
 struct HLS_Design_Meta {
 // port data: name, bitwidth, direction (enumerator: hls_in, hls_out, hls_inout), group.
-static const Port_Property port_props[37];
-static const HLS_INT32  latency = 59225;
-static const HLS_INT32  II = 59225;
+static const Port_Property port_props[20];
+static const HLS_INT32  latency = 120660;
+static const HLS_INT32  II = 120660;
 static const char*  dut_name;
 static bool is_vld_port(HLS_UINT32);
 };

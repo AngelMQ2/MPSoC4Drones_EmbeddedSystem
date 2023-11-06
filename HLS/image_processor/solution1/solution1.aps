@@ -6,10 +6,10 @@
         <DownStreamTool name="vivado"/>
     </downStreamTool>
     <config>
-        <config_export format="ip_catalog" output="/home/acerpc/Documents/SDU/EmbeddedSystems/assigment2/im_pros.zip" rtl="vhdl"/>
+        <config_export format="ip_catalog" output="/home/acerpc/OneDrive/SDU/EmbeddedSystems/MPSoC4Drones_EmbeddedSystem/im_pros.zip" rtl="vhdl"/>
     </config>
     <UIConfigurations>
-        <UIAutosynConf boardInfo="Ultra96v2 Evaluation Platform (xczu3eg-sbva484-1-e) " hideTrivialOp="true" isBasedOnBoard="true" isSolutionDirty="true" isStopAskAgain="false" showDetailDesignViewer="false">
+        <UIAutosynConf boardInfo="Ultra96v2 Evaluation Platform (xczu3eg-sbva484-1-e) " hideTrivialOp="true" isBasedOnBoard="true" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
             <Platform>xilinx/zynquplus/zynquplus</Platform>
             <Platform>xilinx/zynquplus/zynquplus_fpv7</Platform>
             <customLibs/>
@@ -40,8 +40,8 @@
             </RTLs>
         </UIAutoSimConf>
     </UIConfigurations>
-    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="/home/acerpc/Documents/SDU/EmbeddedSystems/assigment2/im_pros.zip" rtl="verilog" rtlButton="true" rtlCombo="vhdl">
-        <Format formatName="ip_catalog"/>
+    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="/home/acerpc/OneDrive/SDU/EmbeddedSystems/MPSoC4Drones_EmbeddedSystem/im_pros.zip" rtl="verilog" rtlButton="true" rtlCombo="vhdl">
+        <Format formatName="ip_catalog" description="" vendor="" library="" ipname="im_pros" version="" display_name="" taxonomy=""/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
         <Format formatName="syn_dcp"/>

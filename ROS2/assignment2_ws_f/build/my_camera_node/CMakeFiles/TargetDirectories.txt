@@ -1,0 +1,12 @@
+/home/mp4d/assignment2_ws/build/my_camera_node/CMakeFiles/install/strip.dir
+/home/mp4d/assignment2_ws/build/my_camera_node/CMakeFiles/edit_cache.dir
+/home/mp4d/assignment2_ws/build/my_camera_node/CMakeFiles/test.dir
+/home/mp4d/assignment2_ws/build/my_camera_node/CMakeFiles/install.dir
+/home/mp4d/assignment2_ws/build/my_camera_node/CMakeFiles/list_install_components.dir
+/home/mp4d/assignment2_ws/build/my_camera_node/CMakeFiles/rebuild_cache.dir
+/home/mp4d/assignment2_ws/build/my_camera_node/CMakeFiles/listener.dir
+/home/mp4d/assignment2_ws/build/my_camera_node/CMakeFiles/xim_pros2.dir
+/home/mp4d/assignment2_ws/build/my_camera_node/CMakeFiles/install/local.dir
+/home/mp4d/assignment2_ws/build/my_camera_node/CMakeFiles/xim_pros.dir
+/home/mp4d/assignment2_ws/build/my_camera_node/CMakeFiles/my_camera_node_uninstall.dir
+/home/mp4d/assignment2_ws/build/my_camera_node/CMakeFiles/uninstall.dir

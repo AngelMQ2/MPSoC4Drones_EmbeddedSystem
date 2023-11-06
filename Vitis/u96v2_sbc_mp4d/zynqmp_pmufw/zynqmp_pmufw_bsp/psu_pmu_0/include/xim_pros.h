@@ -80,6 +80,12 @@ int XIm_pros_Initialize(XIm_pros *InstancePtr, const char* InstanceName);
 int XIm_pros_Release(XIm_pros *InstancePtr);
 #endif
 
+void XIm_pros_Start(XIm_pros *InstancePtr);
+u32 XIm_pros_IsDone(XIm_pros *InstancePtr);
+u32 XIm_pros_IsIdle(XIm_pros *InstancePtr);
+u32 XIm_pros_IsReady(XIm_pros *InstancePtr);
+void XIm_pros_EnableAutoRestart(XIm_pros *InstancePtr);
+void XIm_pros_DisableAutoRestart(XIm_pros *InstancePtr);
 
 u32 XIm_pros_Get_imageIn_BaseAddress(XIm_pros *InstancePtr);
 u32 XIm_pros_Get_imageIn_HighAddress(XIm_pros *InstancePtr);
@@ -99,6 +105,14 @@ u32 XIm_pros_Write_imageOut_Words(XIm_pros *InstancePtr, int offset, word_type *
 u32 XIm_pros_Read_imageOut_Words(XIm_pros *InstancePtr, int offset, word_type *data, int length);
 u32 XIm_pros_Write_imageOut_Bytes(XIm_pros *InstancePtr, int offset, char *data, int length);
 u32 XIm_pros_Read_imageOut_Bytes(XIm_pros *InstancePtr, int offset, char *data, int length);
+
+void XIm_pros_InterruptGlobalEnable(XIm_pros *InstancePtr);
+void XIm_pros_InterruptGlobalDisable(XIm_pros *InstancePtr);
+void XIm_pros_InterruptEnable(XIm_pros *InstancePtr, u32 Mask);
+void XIm_pros_InterruptDisable(XIm_pros *InstancePtr, u32 Mask);
+void XIm_pros_InterruptClear(XIm_pros *InstancePtr, u32 Mask);
+u32 XIm_pros_InterruptGetEnabled(XIm_pros *InstancePtr);
+u32 XIm_pros_InterruptGetStatus(XIm_pros *InstancePtr);
 
 #ifdef __cplusplus
 }

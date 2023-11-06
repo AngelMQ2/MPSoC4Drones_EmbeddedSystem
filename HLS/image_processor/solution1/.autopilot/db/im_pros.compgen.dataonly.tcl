@@ -18,16 +18,11 @@ imageOut {
 	offset 32768
 	offset_end 49151
 }
-}
-dict set axilite_register_dict AXI_CPU $port_AXI_CPU
-
-
-set port_control {
 ap_start { }
 ap_done { }
 ap_ready { }
 ap_idle { }
 }
-dict set axilite_register_dict control $port_control
+dict set axilite_register_dict AXI_CPU $port_AXI_CPU
 
 

@@ -22,22 +22,22 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>59225</Best-caseLatency>
-<Average-caseLatency>59225</Average-caseLatency>
-<Worst-caseLatency>59225</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.592 ms</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.592 ms</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.592 ms</Worst-caseRealTimeLatency>
-<Interval-min>59226</Interval-min>
-<Interval-max>59226</Interval-max>
+<Best-caseLatency>120660</Best-caseLatency>
+<Average-caseLatency>120660</Average-caseLatency>
+<Worst-caseLatency>120660</Worst-caseLatency>
+<Best-caseRealTimeLatency>1.207 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>1.207 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>1.207 ms</Worst-caseRealTimeLatency>
+<Interval-min>120661</Interval-min>
+<Interval-max>120661</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <VITIS_LOOP_17_1_VITIS_LOOP_18_2>
-<TripCount>11844</TripCount>
-<Latency>59223</Latency>
-<AbsoluteTimeLatency>592230</AbsoluteTimeLatency>
-<PipelineII>5</PipelineII>
-<PipelineDepth>9</PipelineDepth>
+<TripCount>12065</TripCount>
+<Latency>120658</Latency>
+<AbsoluteTimeLatency>1206580</AbsoluteTimeLatency>
+<PipelineII>10</PipelineII>
+<PipelineDepth>12</PipelineDepth>
 </VITIS_LOOP_17_1_VITIS_LOOP_18_2>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
@@ -45,9 +45,9 @@
 <AreaEstimates>
 <Resources>
 <BRAM_18K>16</BRAM_18K>
-<DSP>1</DSP>
-<FF>362</FF>
-<LUT>552</LUT>
+<DSP>2</DSP>
+<FF>411</FF>
+<LUT>1018</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
@@ -71,7 +71,7 @@
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_AXI_CPU_AWREADY</name>
@@ -84,7 +84,7 @@
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_AXI_CPU_AWADDR</name>
@@ -97,7 +97,7 @@
 <Bits>16</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_AXI_CPU_WVALID</name>
@@ -110,7 +110,7 @@
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_AXI_CPU_WREADY</name>
@@ -123,7 +123,7 @@
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_AXI_CPU_WDATA</name>
@@ -136,7 +136,7 @@
 <Bits>32</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_AXI_CPU_WSTRB</name>
@@ -149,7 +149,7 @@
 <Bits>4</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_AXI_CPU_ARVALID</name>
@@ -162,7 +162,7 @@
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_AXI_CPU_ARREADY</name>
@@ -175,7 +175,7 @@
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_AXI_CPU_ARADDR</name>
@@ -188,7 +188,7 @@
 <Bits>16</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_AXI_CPU_RVALID</name>
@@ -201,7 +201,7 @@
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_AXI_CPU_RREADY</name>
@@ -214,7 +214,7 @@
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_AXI_CPU_RDATA</name>
@@ -227,7 +227,7 @@
 <Bits>32</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_AXI_CPU_RRESP</name>
@@ -240,7 +240,7 @@
 <Bits>2</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_AXI_CPU_BVALID</name>
@@ -253,7 +253,7 @@
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_AXI_CPU_BREADY</name>
@@ -266,7 +266,7 @@
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_AXI_CPU_BRESP</name>
@@ -279,227 +279,6 @@
 <Bits>2</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
-</RtlPorts>
-<RtlPorts>
-<name>s_axi_control_AWVALID</name>
-<Object>control</Object>
-<Type>return void</Type>
-<Scope></Scope>
-<IOProtocol>s_axi</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>unknown</Attribute>
-<CType>unknown</CType>
-<HasCtrl>1</HasCtrl>
-</RtlPorts>
-<RtlPorts>
-<name>s_axi_control_AWREADY</name>
-<Object>control</Object>
-<Type>return void</Type>
-<Scope></Scope>
-<IOProtocol>s_axi</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>unknown</Attribute>
-<CType>unknown</CType>
-<HasCtrl>1</HasCtrl>
-</RtlPorts>
-<RtlPorts>
-<name>s_axi_control_AWADDR</name>
-<Object>control</Object>
-<Type>return void</Type>
-<Scope></Scope>
-<IOProtocol>s_axi</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>4</Bits>
-<Attribute>unknown</Attribute>
-<CType>unknown</CType>
-<HasCtrl>1</HasCtrl>
-</RtlPorts>
-<RtlPorts>
-<name>s_axi_control_WVALID</name>
-<Object>control</Object>
-<Type>return void</Type>
-<Scope></Scope>
-<IOProtocol>s_axi</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>unknown</Attribute>
-<CType>unknown</CType>
-<HasCtrl>1</HasCtrl>
-</RtlPorts>
-<RtlPorts>
-<name>s_axi_control_WREADY</name>
-<Object>control</Object>
-<Type>return void</Type>
-<Scope></Scope>
-<IOProtocol>s_axi</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>unknown</Attribute>
-<CType>unknown</CType>
-<HasCtrl>1</HasCtrl>
-</RtlPorts>
-<RtlPorts>
-<name>s_axi_control_WDATA</name>
-<Object>control</Object>
-<Type>return void</Type>
-<Scope></Scope>
-<IOProtocol>s_axi</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>32</Bits>
-<Attribute>unknown</Attribute>
-<CType>unknown</CType>
-<HasCtrl>1</HasCtrl>
-</RtlPorts>
-<RtlPorts>
-<name>s_axi_control_WSTRB</name>
-<Object>control</Object>
-<Type>return void</Type>
-<Scope></Scope>
-<IOProtocol>s_axi</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>4</Bits>
-<Attribute>unknown</Attribute>
-<CType>unknown</CType>
-<HasCtrl>1</HasCtrl>
-</RtlPorts>
-<RtlPorts>
-<name>s_axi_control_ARVALID</name>
-<Object>control</Object>
-<Type>return void</Type>
-<Scope></Scope>
-<IOProtocol>s_axi</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>unknown</Attribute>
-<CType>unknown</CType>
-<HasCtrl>1</HasCtrl>
-</RtlPorts>
-<RtlPorts>
-<name>s_axi_control_ARREADY</name>
-<Object>control</Object>
-<Type>return void</Type>
-<Scope></Scope>
-<IOProtocol>s_axi</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>unknown</Attribute>
-<CType>unknown</CType>
-<HasCtrl>1</HasCtrl>
-</RtlPorts>
-<RtlPorts>
-<name>s_axi_control_ARADDR</name>
-<Object>control</Object>
-<Type>return void</Type>
-<Scope></Scope>
-<IOProtocol>s_axi</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>4</Bits>
-<Attribute>unknown</Attribute>
-<CType>unknown</CType>
-<HasCtrl>1</HasCtrl>
-</RtlPorts>
-<RtlPorts>
-<name>s_axi_control_RVALID</name>
-<Object>control</Object>
-<Type>return void</Type>
-<Scope></Scope>
-<IOProtocol>s_axi</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>unknown</Attribute>
-<CType>unknown</CType>
-<HasCtrl>1</HasCtrl>
-</RtlPorts>
-<RtlPorts>
-<name>s_axi_control_RREADY</name>
-<Object>control</Object>
-<Type>return void</Type>
-<Scope></Scope>
-<IOProtocol>s_axi</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>unknown</Attribute>
-<CType>unknown</CType>
-<HasCtrl>1</HasCtrl>
-</RtlPorts>
-<RtlPorts>
-<name>s_axi_control_RDATA</name>
-<Object>control</Object>
-<Type>return void</Type>
-<Scope></Scope>
-<IOProtocol>s_axi</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>unknown</Attribute>
-<CType>unknown</CType>
-<HasCtrl>1</HasCtrl>
-</RtlPorts>
-<RtlPorts>
-<name>s_axi_control_RRESP</name>
-<Object>control</Object>
-<Type>return void</Type>
-<Scope></Scope>
-<IOProtocol>s_axi</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>2</Bits>
-<Attribute>unknown</Attribute>
-<CType>unknown</CType>
-<HasCtrl>1</HasCtrl>
-</RtlPorts>
-<RtlPorts>
-<name>s_axi_control_BVALID</name>
-<Object>control</Object>
-<Type>return void</Type>
-<Scope></Scope>
-<IOProtocol>s_axi</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>unknown</Attribute>
-<CType>unknown</CType>
-<HasCtrl>1</HasCtrl>
-</RtlPorts>
-<RtlPorts>
-<name>s_axi_control_BREADY</name>
-<Object>control</Object>
-<Type>return void</Type>
-<Scope></Scope>
-<IOProtocol>s_axi</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>unknown</Attribute>
-<CType>unknown</CType>
-<HasCtrl>1</HasCtrl>
-</RtlPorts>
-<RtlPorts>
-<name>s_axi_control_BRESP</name>
-<Object>control</Object>
-<Type>return void</Type>
-<Scope></Scope>
-<IOProtocol>s_axi</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>2</Bits>
-<Attribute>unknown</Attribute>
-<CType>unknown</CType>
 <HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>

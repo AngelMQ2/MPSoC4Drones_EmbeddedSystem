@@ -6,8 +6,8 @@ BEGIN OS
  PARAMETER OS_NAME = standalone
  PARAMETER OS_VER = 7.3
  PARAMETER PROC_INSTANCE = psu_cortexa53_0
- PARAMETER stdin = psu_uart_0
- PARAMETER stdout = psu_uart_0
+ PARAMETER stdin = psu_uart_1
+ PARAMETER stdout = psu_uart_1
 END
 
 
@@ -17,12 +17,6 @@ BEGIN PROCESSOR
  PARAMETER HW_INSTANCE = psu_cortexa53_0
 END
 
-
-BEGIN DRIVER
- PARAMETER DRIVER_NAME = bram
- PARAMETER DRIVER_VER = 4.5
- PARAMETER HW_INSTANCE = axi_bram_ctrl_0
-END
 
 BEGIN DRIVER
  PARAMETER DRIVER_NAME = intc

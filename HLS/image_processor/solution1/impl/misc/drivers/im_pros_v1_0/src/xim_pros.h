@@ -38,13 +38,11 @@ typedef uint64_t u64;
 #else
 typedef struct {
     u16 DeviceId;
-    u32 Control_BaseAddress;
     u32 Axi_cpu_BaseAddress;
 } XIm_pros_Config;
 #endif
 
 typedef struct {
-    u64 Control_BaseAddress;
     u64 Axi_cpu_BaseAddress;
     u32 IsReady;
 } XIm_pros;

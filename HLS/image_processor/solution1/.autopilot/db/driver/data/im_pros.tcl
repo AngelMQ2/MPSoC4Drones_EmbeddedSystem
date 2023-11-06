@@ -6,20 +6,15 @@ proc generate {drv_handle} {
     xdefine_include_file $drv_handle "xparameters.h" "XIm_pros" \
         "NUM_INSTANCES" \
         "DEVICE_ID" \
-        "C_S_AXI_CONTROL_BASEADDR" \
-        "C_S_AXI_CONTROL_HIGHADDR" \
         "C_S_AXI_AXI_CPU_BASEADDR" \
         "C_S_AXI_AXI_CPU_HIGHADDR"
 
     xdefine_config_file $drv_handle "xim_pros_g.c" "XIm_pros" \
         "DEVICE_ID" \
-        "C_S_AXI_CONTROL_BASEADDR" \
         "C_S_AXI_AXI_CPU_BASEADDR"
 
     xdefine_canonical_xpars $drv_handle "xparameters.h" "XIm_pros" \
         "DEVICE_ID" \
-        "C_S_AXI_CONTROL_BASEADDR" \
-        "C_S_AXI_CONTROL_HIGHADDR" \
         "C_S_AXI_AXI_CPU_BASEADDR" \
         "C_S_AXI_AXI_CPU_HIGHADDR"
 }

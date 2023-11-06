@@ -44,7 +44,7 @@ set SCTraceOption all
 set TargetInfo xczu3eg:-sbva484:-1-e
 set SourceFiles {sc {} c ../../image_processor.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile /home/acerpc/assignment2/image_processor/solution1/solution1.directive
+set DirectiveFile /home/acerpc/OneDrive/SDU/EmbeddedSystems/assigment2/HLS/image_processor/solution1/solution1.directive
 set TBFiles {verilog ../../Image_tb.cpp bc ../../Image_tb.cpp vhdl ../../Image_tb.cpp sc ../../Image_tb.cpp cas ../../Image_tb.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
